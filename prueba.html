@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="prueba">
+<head>
+    <title>Probando angular</title>
+    <link rel="stylesheet" href="bower_components\angular-material\angular-material.min.css">
+</head>
+
+
+<body ng-controller="functionName as vm">
+
+
+<md-toolbar class="md-hue-2">
+  <div class="md-toolbar-tools">
+    <md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
+      <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+    </md-button>
+    <h2>
+      <span><h1>prueba de angular</h1></span>
+    </h2>
+    <span flex></span>
+    <md-button class="md-icon-button" aria-label="Favorite">
+      <md-icon md-svg-icon="img/icons/favorite.svg" style="color: greenyellow;"></md-icon>
+    </md-button>
+    <md-button class="md-icon-button" aria-label="More">
+      <md-icon md-svg-icon="img/icons/more_vert.svg"></md-icon>
+    </md-button>
+  </div>
+</md-toolbar>
+
+  <md-list>
+   <md-list-item class="md-2-line" ng-repeat="p in vm.persona">
+     <div class="md-list-item-text">
+       <p>{{p.dni}} ++ {{p.nombre}}</p>
+       <p>{{vm.miEdad(p)}}</p>
+     </div>
+   </md-list-item>
+  </md-list>
+</body>
+
+
+<script type="text/javascript" src="bower_components\angular\angular.min.js"></script>
+<script type="text/javascript" src="bower_components\angular-animate\angular-animate.min.js"></script>
+<script type="text/javascript" src="bower_components\angular-aria\angular-aria.min.js"></script>
+<script type="text/javascript" src="bower_components\angular-messages\angular-messages.min.js"></script>
+<script type="text/javascript" src="bower_components\angular-material\angular-material.min.js"></script>
+<script type="text/javascript" src="prueba.js"></script>
+</html>
